@@ -24,7 +24,7 @@ async def mention_afk(mention):
         if ISAFK:
             if mention.sender_id not in USERS:
                 await mention.reply(
-                    f"Sorry! My boss is AFK due to `{AFKREASON}`."
+                    f"Sorry! My Master is AFK due to `{AFKREASON}`."
                     "\nWould ping him to look into the message soon 😉."
                 )
                 USERS.update({mention.sender_id: 1})
@@ -32,7 +32,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % 5 == 0:
                     await mention.reply(
-                        "Sorry! But my boss is still not here."
+                        "Sorry! But my Master is still not here."
                         "\nTry to ping him a little later. I am sorry 😖."
                         f"\nHe told me he was busy with `{AFKREASON}`."
                     )
